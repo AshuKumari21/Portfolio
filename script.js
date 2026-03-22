@@ -1,6 +1,23 @@
 // Initialize Lucide Icons
 lucide.createIcons();
 
+// About Modal Logic (Placed here for immediate accessibility)
+document.addEventListener('DOMContentLoaded', () => {    // Remove old modal logic as per user request (Fixed section instead)
+    
+    // Add Mouse Glow to 3D Skill Cards
+    const skillCards = document.querySelectorAll('.skill-3d-card');
+    skillCards.forEach(card => {
+        card.onmousemove = (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            card.style.setProperty('--mouse-x', `${x}px`);
+            card.style.setProperty('--mouse-y', `${y}px`);
+        };
+    });
+});
+
 // Typewriter Effect
 const typewriterElement = document.getElementById('typewriter');
 const roles = [
@@ -404,3 +421,67 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Advanced 3D Tilt & Mouse Glow Effect for About/Education
+document.addEventListener('DOMContentLoaded', () => {
+    const advancedCards = document.querySelectorAll('.about-card, .education-card, .feature-modal-card');
+
+    advancedCards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            // Update Mouse Glow Position
+            card.style.setProperty('--mouse-x', `${x}px`);
+            card.style.setProperty('--mouse-y', `${y}px`);
+
+            // Calculate Rotation
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = (centerY - y) / 15; // Subtle rotate
+            const rotateY = (x - centerX) / 15;
+
+            card.style.transform = `scale3d(1.02, 1.02, 1.02) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = `scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg)`;
+            if (card.classList.contains('about-card')) {
+                card.style.animation = 'float3d 6s ease-in-out infinite';
+            }
+        });
+
+        card.addEventListener('mouseenter', () => {
+            if (card.classList.contains('about-card')) {
+                card.style.animation = 'none'; // Pause floating while tilting
+            }
+        });
+    });
+
+    // About Modal Logic
+    const aboutBtn = document.getElementById('about-btn');
+    const aboutModal = document.getElementById('about-modal');
+    const closeAboutBtn = document.getElementById('close-about');
+
+    if (aboutBtn && aboutModal) {
+        aboutBtn.addEventListener('click', () => {
+            aboutModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        closeAboutBtn.addEventListener('click', () => {
+            aboutModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        aboutModal.addEventListener('click', (e) => {
+            if (e.target === aboutModal) {
+                aboutModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+    }
+});
+

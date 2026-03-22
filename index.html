@@ -37,7 +37,8 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#coding-stats">Stats</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -45,14 +46,7 @@
                 <li><a href="#achievements">Achievements</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="nav-actions">
-                <button id="theme-toggle" class="icon-btn">
-                    <i data-lucide="moon"></i>
-                </button>
-                <div class="mobile-menu-btn">
-                    <i data-lucide="menu"></i>
-                </div>
-            </div>
+            <!-- Actions removed per user request -->
         </div>
     </nav>
 
@@ -66,13 +60,12 @@
                     <span id="typewriter"></span><span class="cursor">|</span>
                 </div>
                 <p class="hero-bio">
-                    Transforming data into intelligent solutions using Machine Learning, Deep Learning, and Advanced
-                    Analytics.
-                    Passionate about solving real-world problems with data-driven approaches.
+                    Turning data into meaningful insights with Machine Learning and Data Analysis. 
+                    I build modern, responsive, and user-friendly web interfaces that deliver real impact.
                 </p>
                 <div class="hero-actions">
-                    <a href="resume.html" target="_blank" class="btn primary-btn" id="resume-download">Download CV <i
-                            data-lucide="download"></i></a>
+                    <a href="resume.html" target="_blank" class="btn primary-btn" id="resume-download">Download CV <i data-lucide="download"></i></a>
+                    <a href="about.html" class="btn primary-btn">About Me <i data-lucide="user"></i></a>
                 </div>
                 <div class="hero-socials">
                     <a href="https://github.com/AshuKumari21" target="_blank" class="social-link" title="GitHub"><i
@@ -82,35 +75,19 @@
                     <a href="mailto:ashukumari111ashu@gmail.com" class="social-link" title="Email"><i
                             data-lucide="mail"></i></a>
                     <a href="https://leetcode.com/u/aashu_21/" target="_blank" class="social-link" title="LeetCode">
-                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2"
-                            fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                        </svg>
+                        <i data-lucide="layers"></i>
                     </a>
                 </div>
             </div>
             <div class="hero-image-container">
                 <div class="image-mask">
-                    <img id="profile-img" src="assets/profile.png" alt="Ashu Kumari">
+                    <img id="profile-img" src="assets/profile.jpg" alt="Ashu Kumari">
                 </div>
                 <div class="glow-ring"></div>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="about-section scroll-reveal">
-            <div class="container">
-                <h2 class="section-title">About Me</h2>
-                <div class="glass about-card">
-                    <p class="about-text">
-                        I am a passionate Computer Science student with a strong interest in Data Science, Artificial
-                        Intelligence, and Full Stack Development. I enjoy building real-world projects that solve
-                        practical problems. I am continuously learning new technologies and improving my skills to
-                        become a successful software developer and data scientist.
-                    </p>
-                </div>
-            </div>
-        </section>
+    </main>
 
         <!-- Education Section -->
         <section id="education" class="education-section scroll-reveal">
@@ -118,35 +95,49 @@
                 <h2 class="section-title">Education</h2>
                 <div class="education-grid">
                     <!-- Edu 1 -->
-                    <div class="glass education-card">
-                        <div class="edu-header">
-                            <i data-lucide="graduation-cap" class="edu-icon"></i>
-                            <div>
-                                <h3 class="edu-degree">Bachelor of Technology in Computer Science</h3>
-                                <p class="edu-school">[Your College Name]</p>
+                    <div class="education-card-v2 tilt-card">
+                        <div class="edu-card-top">
+                            <div class="edu-icon-sm"><i data-lucide="graduation-cap"></i></div>
+                            <h3 class="edu-title">Bachelor of Technology (CSE)</h3>
+                            <p class="edu-institution">Lovely Professional University</p>
+                        </div>
+                        <div class="edu-card-bottom">
+                            <span class="edu-date-pill">Since Aug 2023</span>
+                            <div class="edu-score-minimal">
+                                <span class="score-label">CGPA:</span>
+                                <span class="score-value">7.53</span>
                             </div>
                         </div>
-                        <span class="edu-year">Expected Graduation: 2026</span>
                     </div>
 
                     <!-- Edu 2 -->
-                    <div class="glass education-card">
-                        <div class="edu-header">
-                            <i data-lucide="book-open" class="edu-icon"></i>
-                            <div>
-                                <h3 class="edu-degree">12th Grade (Senior Secondary)</h3>
-                                <p class="edu-school">[Your School Name]</p>
+                    <div class="education-card-v2 tilt-card">
+                        <div class="edu-card-top">
+                            <div class="edu-icon-sm"><i data-lucide="book-open"></i></div>
+                            <h3 class="edu-title">Intermediate (Senior Secondary)</h3>
+                            <p class="edu-institution">Brilliant PU College</p>
+                        </div>
+                        <div class="edu-card-bottom">
+                            <span class="edu-date-pill">2020 – 2021</span>
+                            <div class="edu-score-minimal">
+                                <span class="score-label">Percentage:</span>
+                                <span class="score-value">80%</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Edu 3 -->
-                    <div class="glass education-card">
-                        <div class="edu-header">
-                            <i data-lucide="book" class="edu-icon"></i>
-                            <div>
-                                <h3 class="edu-degree">10th Grade</h3>
-                                <p class="edu-school">[Your School Name]</p>
+                    <div class="education-card-v2 tilt-card">
+                        <div class="edu-card-top">
+                            <div class="edu-icon-sm"><i data-lucide="award"></i></div>
+                            <h3 class="edu-title">Matriculation (High School)</h3>
+                            <p class="edu-institution">Maya Pratap Kanya High School</p>
+                        </div>
+                        <div class="edu-card-bottom">
+                            <span class="edu-date-pill">2018 – 2019</span>
+                            <div class="edu-score-minimal">
+                                <span class="score-label">Percentage:</span>
+                                <span class="score-value">70%</span>
                             </div>
                         </div>
                     </div>
@@ -863,12 +854,7 @@
                 <div class="progress-bg">
                     <div id="modal-progress" class="progress-bar" style="width: 90%"></div>
                 </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Custom JS -->
-    <script src="script.js?v=3.3"></script>
+    <script src="script.js?v=4.0"></script>
 </body>
-
 </html>
