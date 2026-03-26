@@ -106,10 +106,8 @@ const skillsData = {
     ],
     softskills: [
         { name: 'Problem Solving', level: 96, icon: 'puzzle', desc: 'Ability to analyze complex problems and design solutions. Involves logical thinking and creativity. Important for coding and data challenges. Enhances decision-making skills. Core skill for engineers.' },
-        { name: 'Communication', level: 94, icon: 'message-square', desc: 'Ability to explain technical concepts clearly. Helps collaborate with teams and stakeholders. Important for presentations and reporting. Bridges technical and non-technical gaps. Essential in professional environments.' },
         { name: 'Time Management', level: 92, icon: 'clock', desc: 'Managing tasks efficiently to meet deadlines. Helps prioritize work effectively. Improves productivity and focus. Important for handling multiple projects. Ensures timely delivery.' },
-        { name: 'Adaptability', level: 95, icon: 'refresh-cw', desc: 'Ability to learn new tools and technologies quickly. Helps adjust to changing environments. Important in fast-paced industries. Encourages continuous learning. Key for growth.' },
-        { name: 'Team Collaboration', level: 94, icon: 'users', desc: 'Working effectively with team members. Encourages idea sharing and coordination. Improves project outcomes. Essential for large projects. Builds strong professional relationships.' }
+        { name: 'Adaptability', level: 95, icon: 'refresh-cw', desc: 'Ability to learn new tools and technologies quickly. Helps adjust to changing environments. Important in fast-paced industries. Encourages continuous learning. Key for growth.' }
     ]
 };
 
